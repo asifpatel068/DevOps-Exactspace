@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const jsonData = jsonInput.value;
   
       try {
-        const response = await fetch('http://localhost:3000/data', {
+        const response = await fetch('https://json-data-2gba.onrender.com/data', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         showLoader(formResponseElement);
   
-        const formResponse = await fetch('http://localhost:3000/new');
+        const formResponse = await fetch('https://json-data-2gba.onrender.com/new');
         const formData = await formResponse.json();
   
         hideLoader(formResponseElement, '');
