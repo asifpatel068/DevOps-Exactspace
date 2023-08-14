@@ -87,3 +87,4 @@ body, h1, h2, h3, p, pre, button, textarea {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
 
+  }

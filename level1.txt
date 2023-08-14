@@ -1,0 +1,15 @@
+1. *find all the ".log" files which you have access to in ascending order*
+--> find ~ -type f -name "*.log" -exec du -h {} + | sort -rh
+
+2. To navigate to the directory  
+cd /c/Users/asifp/AppData/Local/Autodesk/Web Services/Log
+
+3. To find the largest log file in the directory
+ls -lhS /c/Users/asifp/AppData/Local/Autodesk/Web Services/Log*.log | head -n 1
+
+4. To open the log file
+less /c/Users/asifp/AppData/Local/Autodesk/Web Services/Log/WebServices.log
+
+5. To truncate it to 100 lines
+head -n 100 WebServices.log.log
+tail -n 100 WebServices.log.log
