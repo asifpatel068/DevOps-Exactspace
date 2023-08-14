@@ -1,0 +1,85 @@
+body, h1, h2, h3, p, pre, button, textarea {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .Main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .input-section,
+  .output-section {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: white;
+  }
+  
+  
+  .input-section {
+    background-color: skyblue;
+  }
+  
+  .input-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #jsonInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #submitBtn {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #submitBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling for the output section */
+  .output-section {
+    background-color: skyblue;
+  }
+  
+  .output-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .json-output,
+  .form-output {
+    margin-top: 20px;
+  }
+  
+  .json-output h2,
+  .form-output h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #jsonResponse,
+  #formResponse {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    overflow: auto;
+  }
+  

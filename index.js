@@ -3,7 +3,7 @@ const cors=require("cors")
 require("dotenv").config()
 
 const {connection}=require("./Config/db")
-const {payload}=require("./Models/data.model")
+const {DataModel}=require("./Models/data.model")
 
 const app=express()
 
@@ -21,7 +21,7 @@ app.post('/data', async (req, res) => {
         const parsedData = JSON.parse(payload);
         console.log(parsedData);
         
-        await payload.create({ data: payload });
+        await DataModel.create({ data: payload });
 
         res.json(parsedData);
     } catch (error) {
@@ -29,10 +29,10 @@ app.post('/data', async (req, res) => {
     }
 });
 
-app.get('/data', async (req, res) => {
+app.get('/new', async (req, res) => {
     try {
 
-        const Data = await payload.findOne().sort({ timestamp: -1 });
+        const Data = await DataModel.findOne().sort({ timestamp: -1 });
         if (Data) {
             res.json(JSON.parse(Data.data));
         } else {
